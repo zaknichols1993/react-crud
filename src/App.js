@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Users from './Users';
+import AddUser from './AddUser';
 
 class App extends Component {
   state = {
@@ -16,13 +17,21 @@ class App extends Component {
     });
     this.setState({
       users: users
+      // If key and value are the same
+      // you can use 
+      // this.setState({users})
     })
+  }
+
+  addUser = (user) => {
+    // 7:36 in youtube video epside 2 todo app net ninja
   }
 
   render() {
     return (
-      <div className="App">
+      <div className="App container">
       <Users users={this.state.users} deleteUser={this.deleteUser}/>
+      <AddUser addUser={this.addUser} />
       </div>
     );
   }

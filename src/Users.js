@@ -11,7 +11,7 @@ const Users = ({users, deleteUser}) => {
             )
         })
     ) : (
-        <p>there are no users left</p>
+        <p className="red">there are no users left</p>
     )
     return(
         <div>{userList}</div>
