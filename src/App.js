@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   addUser = (user) => {
-    // 7:36 in youtube video epside 2 todo app net ninja
+    // 7:36 in youtube video epside 2 todo app net ninja 
   }
 
   render() {
