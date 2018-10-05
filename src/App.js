@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 
-import People from './People';
+import Users from './Users';
 
 class App extends Component {
   state = {
-      people: [
+      users: [
         {id: 1, name: 'jack', gender: 'male'},
         {id: 2, name: 'jill', gender: 'female'}
       ]
   }
 
-  deletePerson = (id) => {
-    console.log(id);
+  deleteUser = (id) => {
+    const users = this.state.users.filter(user => {
+      return user.id !== id
+    });
+    this.setState({
+      users: users
+    })
   }
 
   render() {
     return (
       <div className="App">
-      <People people={this.state.people} deletePerson={this.deletePerson}/>
+      <Users users={this.state.users} deleteUser={this.deleteUser}/>
       </div>
     );
   }
