@@ -6,7 +6,7 @@ const Users = ({users, deleteUser}) => {
         users.map(user => {
             return(
                 <div key={user.id}>
-                    <span onClick={() => {deleteUser(user.id)}}>{user.name} : {user.gender}</span>
+                    <span onClick={() => {deleteUser(user.id)}}>{user.name}</span>
                 </div>
             )
         })

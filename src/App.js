@@ -24,7 +24,11 @@ class App extends Component {
   }
 
   addUser = (user) => {
-    // 7:36 in youtube video epside 2 todo app net ninja 
+    user.id = Math.random();
+    let users = [...this.state.users, user];
+    this.setState({
+      users: users
+    })
   }
 
   render() {

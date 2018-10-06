@@ -14,6 +14,9 @@ class AddUser extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addUser(this.state);
+        this.setState({
+            name: ''
+        })
     }
 
     render() {
@@ -21,7 +24,7 @@ class AddUser extends Component {
             <div>
                 <form className='smaller' onSubmit={this.handleSubmit}>
                     <label>Add new user:</label>
-                    <input type="text" onChange={this.handleChange}></input>
+                    <input type="text" onChange={this.handleChange} value={this.state.name}></input>
                 </form>
             </div>
         )
